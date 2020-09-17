@@ -1,0 +1,15 @@
+<h1>COUNT PAGE</h1>
+<a href="{% url 'home' %}">Start Again</a>
+<br>
+<h1>Your text has {{ wordcount }} words</h1>
+<br><br>
+<h2>Full text: {{ formtext }}</h2>
+<br>
+<h3>Sorted Words:</h3>
+
+{% for word, count in sortedWords %}
+
+{{ word }} - {{ count }}
+<br>
+
+{% endfor %}
